@@ -6,7 +6,7 @@ This is a simple BMI (Body Mass Index) calculator built using Python's Tkinter l
 
 - **User Input:** The application allows users to input their weight (in kilograms) and height (in meters).
 - **BMI Calculation:** Upon entering the details and clicking the "Calculate BMI" button, the app calculates the BMI.
-- **BMI Result Display:** The calculated BMI is displayed on the screen.
+- **BMI Result Display:** The calculated BMI is displayed on the screen with the associated BMI category.
 - **BMI Range Bar:** A visual bar that changes color based on the calculated BMI, indicating the BMI category (e.g., normal weight, overweight, obesity).
 
 ## BMI Ranges and Colors
