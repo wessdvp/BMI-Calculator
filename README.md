@@ -11,11 +11,12 @@ This is a simple BMI (Body Mass Index) calculator built using Python's Tkinter l
 
 ## BMI Ranges and Colors
 
+- **Under 18.5**: Blue (Underweight)
 - **18.5 - 24.9**: Green (Normal weight)
 - **25 - 29.9**: Yellow (Overweight)
-- **30 - 40**: Orange (Obesity Class I)
-- **40 - 50**: Red (Obesity Class II)
-- **50+**: Brown (Extreme Obesity)
+- **30 - 34.9**: Orange (Moderately obese)
+- **35 - 39.9**: Red (Severely obese)
+- **40+**: Brown (Morbidly obese)
 
 ## Getting Started
 
@@ -27,10 +28,6 @@ Make sure you have Python installed on your system. This script uses the Tkinter
 
 1. Clone this repository or download the script file.
 2. Run the script using Python.
-
-```bash
-python bmi_calculator.py
-```
 
 ### Usage
 
@@ -51,7 +48,12 @@ If the user inputs a weight of 70 kg and a height of 1.75 m:
 
 - The calculated BMI will be `22.86`.
 - The result will be displayed as `BMI: 22.86`.
+- The obesity class will be displayed as `Normal weight`
 - The BMI range bar will be green, indicating normal weight.
+
+## Dependencies
+
+tkinter (for the GUI)
 
 ## Contributing
 
@@ -60,3 +62,17 @@ If you'd like to contribute to this project, feel free to fork the repository an
 ## License
 
 This project is licensed under the MIT License. See the LICENSE file for details.
+
+## Version History
+
+    v1.0: Initial release of the code.
+    v1.1:
+        Fixed BMI classification to align with medical guidelines.
+        Added the underweight category.
+        Added text labels for obesity classes:
+            Underweight: BMI < 18.5
+            Normal weight: BMI 18.5 to 24.9
+            Overweight: BMI 25 to 29.9
+            Moderately obese: BMI 30 to 34.9
+            Severely obese: BMI 35 to 39.9
+            Morbidly obese: BMI ≥ 40
