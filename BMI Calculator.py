@@ -19,7 +19,7 @@ def calculate_bmi():
         result_label.config(text="Error: Please enter valid numbers.")
         bar_canvas.delete("all")
 
-#obesity meter
+# obesity meter
 def get_obesity_state(bmi):
     if bmi < 18.5:
         return "Underweight"
@@ -34,10 +34,11 @@ def get_obesity_state(bmi):
     else:
         return "Morbidly obese"
 
+# the bmi bar function
 def update_bar(bmi):
     bar_canvas.delete("all")
 
-    # Define BMI ranges and colors
+    # define BMI ranges and colors
     ranges = [(0, 18.49, "blue"), (18.5, 24.99, "green"), (25, 29.99, "yellow"), (30, 34.99, "orange"), (35, 39.99, "red"), (40, float('inf'), "brown")]
     # Find the color based on the BMI value
     for min_bmi, max_bmi, color in ranges:
@@ -47,9 +48,9 @@ def update_bar(bmi):
     else:
         bar_color = "grey"  # Default color if BMI is out of range
 
-    # Draw the bar
+    # draw the bar
 
-    # Adjust the bar width calculation to handle higher BMI values
+    # adjust the bar width calculation to handle higher BMI values
     if bmi < 50:
         bar_width = 280 * (bmi - 10) / 40  # Normal scaling for BMI < 50
     else:
@@ -57,39 +58,39 @@ def update_bar(bmi):
 
     bar_canvas.create_rectangle(10, 10, 10 + bar_width, 50, fill=bar_color, outline="black")
 
-# Create the main window
+# create the main window
 window = tk.Tk()
 window.title("BMI Calculator")
 
-# Create and place the weight label and entry
+# create and place the weight label and entry
 weight_label = tk.Label(window, text="Weight (kg):")
 weight_label.pack()
 
 weight_entry = tk.Entry(window)
 weight_entry.pack()
 
-# Create and place the height label and entry
+# create and place the height label and entry
 height_label = tk.Label(window, text="Height (m):")
 height_label.pack()
 
 height_entry = tk.Entry(window)
 height_entry.pack()
 
-# Create and place the calculate button
+# create and place the calculate button
 calculate_button = tk.Button(window, text="Calculate BMI", command=calculate_bmi)
 calculate_button.pack()
 
-# Create and place the result label
+# create and place the result label
 result_label = tk.Label(window, text="")
 result_label.pack()
 
-# Create and place the BMI range bar
+# create and place the BMI range bar
 bar_canvas = tk.Canvas(window, width=300, height=60, bg="white")
 bar_canvas.pack()
 
-# Create and place the obesity state label
+# create and place the obesity state label
 obesity_label = tk.Label(window, text="")
 obesity_label.pack()
 
-# Run the application
+# run the application
 window.mainloop()
